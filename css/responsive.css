@@ -1,0 +1,160 @@
+
+/* =====================================
+   PROMETHEUS-X - SCREEN RESPONSIVENESS
+===================================== */
+
+/* Desktop screen: fit dashboard in one view */
+@media (min-width: 1200px) {
+
+    .sidebar {
+        padding: 20px 15px;
+    }
+
+    .brand {
+        margin-bottom: 25px;
+    }
+
+    .menu-group {
+        margin-bottom: 17px;
+    }
+
+    .nav-link {
+        padding: 8px 10px;
+        margin-bottom: 2px;
+    }
+
+    .main-content {
+        padding: 20px 25px 10px;
+    }
+
+    .topbar {
+        margin-bottom: 20px;
+    }
+
+    .section-heading {
+        margin-bottom: 14px;
+    }
+
+    .kpi-grid {
+        gap: 14px;
+        margin-bottom: 17px;
+    }
+
+    .kpi-card {
+        padding: 15px 17px;
+    }
+
+    .kpi-card h3 {
+        margin: 8px 0 2px;
+    }
+
+    .dashboard-grid {
+        gap: 14px;
+    }
+
+    .panel {
+        padding: 15px;
+    }
+
+    .panel-heading {
+        margin-bottom: 10px;
+    }
+
+    td {
+        padding: 10px 8px;
+    }
+
+    .defect-item {
+        padding: 9px 0;
+    }
+
+    .health-item {
+        padding: 8px 3px;
+    }
+
+    .dashboard-footer {
+        padding-top: 8px;
+    }
+}
+
+/* Medium screens */
+@media (max-width: 1100px) {
+
+    .sidebar {
+        width: 220px;
+        min-width: 220px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .kpi-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "tests"
+            "defects"
+            "health"
+            "performance";
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 700px) {
+
+    .app-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+        padding: 15px;
+    }
+
+    .brand {
+        margin-bottom: 15px;
+    }
+
+    .menu-group {
+        margin-bottom: 12px;
+    }
+
+    .main-content {
+        padding: 18px 14px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .topbar h1 {
+        font-size: 22px;
+    }
+
+    .topbar-right {
+        gap: 10px;
+    }
+
+    .system-status {
+        font-size: 11px;
+    }
+
+    .kpi-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        gap: 10px;
+    }
+}

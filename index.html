@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROMETHEUS-X | Industrial Intelligence</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">P</div>
+                <div>
+                    <h2>PROMETHEUS-X</h2>
+                    <p>INDUSTRIAL INTELLIGENCE</p>
+                </div>
+            </div>
+
+            <div class="menu-group">
+                <p class="menu-heading">MAIN MENU</p>
+
+                <a href="index.html" class="nav-link active">Dashboard</a>
+                <a href="pages/live-inspection.html" class="nav-link">Live Inspection</a>
+                <a href="pages/inspection-records.html" class="nav-link">Inspection Records</a>
+                <a href="pages/quality-analytics.html" class="nav-link">Quality Analytics</a>
+                <a href="pages/anomaly-alerts.html" class="nav-link">Anomaly Alerts</a>
+            </div>
+
+            <div class="menu-group">
+                <p class="menu-heading">MANAGEMENT</p>
+
+                <a href="pages/audit-trail.html" class="nav-link">Audit Trail</a>
+                <a href="pages/employee-management.html" class="nav-link">Employee Management</a>
+                <a href="pages/security-access.html" class="nav-link">Security & Access</a>
+            </div>
+
+            <div class="menu-group">
+                <p class="menu-heading">SYSTEM</p>
+
+                <a href="pages/model-performance.html" class="nav-link">Model Performance</a>
+                <a href="pages/distribution-shift.html" class="nav-link">Distribution Shift Monitor</a>
+                <a href="pages/system-settings.html" class="nav-link">System Settings</a>
+                <a href="pages/my-profile.html" class="nav-link">My Profile</a>
+            </div>
+
+            <div class="sidebar-bottom">
+
+    <a href="my-profile.html" class="sidebar-profile-card">
+        <div class="sidebar-profile-avatar">VM</div>
+
+        <div class="sidebar-profile-info">
+            <h4>Vishwa Mantri</h4>
+            <p>Administrator</p>
+            <span>Active Account</span>
+        </div>
+    </a>
+
+    <a href="login.html" class="nav-link">Logout</a>
+
+</div>
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOP BAR -->
+            <header class="topbar">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Monitor your industrial inspection operations</p>
+                </div>
+
+                <div class="topbar-right">
+                    <span class="system-status">
+                        <span class="status-dot"></span>
+                        System Online
+                    </span>
+                    <div class="profile-circle">A</div>
+                </div>
+            </header>
+
+
+            <!-- DASHBOARD CONTENT -->
+            <section class="dashboard-content">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Production Overview</h2>
+                        <p>Today's inspection performance</p>
+                    </div>
+                    <span class="date-label">Live Dashboard</span>
+                </div>
+
+
+                <!-- KPI CARDS -->
+                <div class="kpi-grid">
+
+                    <div class="kpi-card">
+                        <div class="kpi-top">
+                            <span>Total Tested</span>
+                            <span class="kpi-icon blue-icon">T</span>
+                        </div>
+                        <h3 id="totalTested">1,248</h3>
+                        <p>Products inspected</p>
+                    </div>
+
+                    <div class="kpi-card">
+                        <div class="kpi-top">
+                            <span>Passed / Normal</span>
+                            <span class="kpi-icon green-icon">P</span>
+                        </div>
+                        <h3 id="totalPassed">1,186</h3>
+                        <p>Normal products</p>
+                    </div>
+
+                    <div class="kpi-card">
+                        <div class="kpi-top">
+                            <span>Anomalies</span>
+                            <span class="kpi-icon red-icon">!</span>
+                        </div>
+                        <h3 id="totalAnomalies">42</h3>
+                        <p>Detected irregularities</p>
+                    </div>
+
+                    <div class="kpi-card">
+                        <div class="kpi-top">
+                            <span>Pending Review</span>
+                            <span class="kpi-icon orange-icon">R</span>
+                        </div>
+                        <h3 id="pendingReview">20</h3>
+                        <p>Awaiting inspector review</p>
+                    </div>
+
+                </div>
+
+
+                <!-- LOWER DASHBOARD -->
+                <div class="dashboard-grid">
+
+                    <!-- RECENT TESTS -->
+                    <section class="panel recent-tests">
+                        <div class="panel-heading">
+                            <div>
+                                <h3>Recent Tests</h3>
+                                <p>Latest inspection activity</p>
+                            </div>
+                            <a href="pages/inspection-records.html">View All</a>
+                        </div>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Product ID</th>
+                                    <th>Result</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>PRD-1024</td>
+                                    <td><span class="status-badge normal">Normal</span></td>
+                                    <td>10:42 AM</td>
+                                </tr>
+                                <tr>
+                                    <td>PRD-1023</td>
+                                    <td><span class="status-badge anomaly">Anomaly</span></td>
+                                    <td>10:38 AM</td>
+                                </tr>
+                                <tr>
+                                    <td>PRD-1022</td>
+                                    <td><span class="status-badge normal">Normal</span></td>
+                                    <td>10:31 AM</td>
+                                </tr>
+                                <tr>
+                                    <td>PRD-1021</td>
+                                    <td><span class="status-badge review">Review</span></td>
+                                    <td>10:25 AM</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+
+                    <!-- RECENT DEFECTS -->
+                    <section class="panel recent-defects">
+                        <div class="panel-heading">
+                            <div>
+                                <h3>Recent Defects</h3>
+                                <p>Detected anomalies</p>
+                            </div>
+                            <a href="pages/anomaly-alerts.html">View All</a>
+                        </div>
+
+                        <div class="defect-item">
+                            <div class="defect-indicator red-bg"></div>
+                            <div class="defect-info">
+                                <h4>Surface Irregularity</h4>
+                                <p>PRD-1023 · High Severity</p>
+                            </div>
+                            <span class="defect-time">10:38 AM</span>
+                        </div>
+
+                        <div class="defect-item">
+                            <div class="defect-indicator orange-bg"></div>
+                            <div class="defect-info">
+                                <h4>Thread Deformation</h4>
+                                <p>PRD-1018 · Medium Severity</p>
+                            </div>
+                            <span class="defect-time">10:12 AM</span>
+                        </div>
+
+                        <div class="defect-item">
+                            <div class="defect-indicator red-bg"></div>
+                            <div class="defect-info">
+                                <h4>Crack Detected</h4>
+                                <p>PRD-1015 · High Severity</p>
+                            </div>
+                            <span class="defect-time">09:54 AM</span>
+                        </div>
+                    </section>
+
+
+                    <!-- SYSTEM HEALTH -->
+                    <section class="panel system-health">
+                        <div class="panel-heading">
+                            <div>
+                                <h3>System Health</h3>
+                                <p>Platform components</p>
+                            </div>
+                        </div>
+
+                        <div class="health-item">
+                            <span>AI Engine</span>
+                            <span class="health-status">● Online</span>
+                        </div>
+
+                        <div class="health-item">
+                            <span>Database</span>
+                            <span class="health-status">● Connected</span>
+                        </div>
+
+                        <div class="health-item">
+                            <span>Drift Monitor</span>
+                            <span class="health-status">● Active</span>
+                        </div>
+
+                        <div class="health-item">
+                            <span>Security</span>
+                            <span class="health-status">● Active</span>
+                        </div>
+                    </section>
+
+
+                    <!-- MODEL PERFORMANCE -->
+                    <section class="panel model-performance">
+                        <div class="panel-heading">
+                            <div>
+                                <h3>Model Performance</h3>
+                                <p>Current model overview</p>
+                            </div>
+                            <a href="pages/model-performance.html">Details</a>
+                        </div>
+
+                        <div class="performance-value">
+                            <h2>96.8%</h2>
+                            <span>Validation Accuracy</span>
+                        </div>
+
+                        <div class="performance-bar">
+                            <div></div>
+                        </div>
+
+                        <div class="performance-footer">
+                            <span>Model Version</span>
+                            <strong>v1.0.0</strong>
+                        </div>
+                    </section>
+
+                </div>
+
+            </section>
+
+            <footer class="dashboard-footer">
+                PROMETHEUS-X · Industrial Anomaly Intelligence Platform
+            </footer>
+
+        </main>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/dashboard.js"></script>
+
+</body>
+</html>

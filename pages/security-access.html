@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security & Access | PROMETHEUS-X</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+<div class="app-container">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <h2>PROMETHEUS-X</h2>
+            <span>Industrial Intelligence</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <p class="menu-label">MAIN MENU</p>
+            <a href="../index.html" class="nav-link">Dashboard</a>
+            <a href="live-inspection.html" class="nav-link">Live Inspection</a>
+            <a href="inspection-records.html" class="nav-link">Inspection Records</a>
+            <a href="quality-analytics.html" class="nav-link">Quality Analytics</a>
+            <a href="anomaly-alerts.html" class="nav-link">Anomaly Alerts</a>
+
+            <p class="menu-label">MANAGEMENT</p>
+            <a href="audit-trail.html" class="nav-link">Audit Trail</a>
+            <a href="employee-management.html" class="nav-link">Employee Management</a>
+            <a href="security-access.html" class="nav-link">Security & Access</a>
+
+            <p class="menu-label">SYSTEM</p>
+            <a href="model-performance.html" class="nav-link">Model Performance</a>
+            <a href="distribution-shift.html" class="nav-link">Distribution Shift Monitor</a>
+            <a href="system-settings.html" class="nav-link">System Settings</a>
+            <a href="my-profile.html" class="nav-link">My Profile</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="../login.html" class="nav-link">Logout</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Security & Access</h2>
+                <p>Verify your identity before accessing security controls</p>
+            </div>
+
+            <div class="topbar-right">
+                <span class="system-status">System Active</span>
+                <div class="profile-circle">VM</div>
+            </div>
+        </header>
+
+        <section class="dashboard-content">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Additional Identity Verification</h2>
+                    <p>Authorized employees must verify their credentials to continue.</p>
+                </div>
+            </div>
+
+            <div class="security-layout">
+
+                <div class="panel security-verification-panel">
+
+                    <div class="security-icon">🔐</div>
+
+                    <h2>Restricted Access</h2>
+
+                    <p class="security-description">
+                        This section contains sensitive system controls.
+                        Please enter your employee credentials for
+                        additional verification.
+                    </p>
+
+                    <form id="securityVerificationForm">
+
+                        <div class="form-group">
+                            <label for="securityEmployeeId">Employee ID</label>
+                            <input
+                                type="text"
+                                id="securityEmployeeId"
+                                placeholder="Enter your Employee ID"
+                                autocomplete="username"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="securityPassword">Password</label>
+                            <input
+                                type="password"
+                                id="securityPassword"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+                        </div>
+
+                        <button type="submit" class="security-submit-btn">
+                            Verify Identity
+                        </button>
+
+                        <p id="securityMessage" class="security-message"
+                           aria-live="polite"></p>
+
+                    </form>
+
+                    <p class="security-footnote">
+                        Your verification attempts should be recorded
+                        in the system audit trail.
+                    </p>
+
+                </div>
+
+                <div class="panel security-information-panel">
+
+                    <h3>Access Permission Matrix</h3>
+
+                    <p>
+                        Access is determined by the employee's assigned role.
+                    </p>
+
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Employee Role</th>
+                                    <th>Access Permission</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>Administrator</td>
+                                    <td>Full Access</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Production Manager</td>
+                                    <td>Limited Access</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Quality Inspector</td>
+                                    <td>Restricted</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Supervisor</td>
+                                    <td>Restricted</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="security-warning">
+                        <strong>Security Notice</strong>
+                        <p>
+                            Frontend checks alone cannot protect sensitive
+                            resources. The backend must verify passwords,
+                            roles and permissions before granting access.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer class="dashboard-footer">
+            PROMETHEUS-X © 2026 | Industrial Anomaly Detection Platform
+        </footer>
+
+    </main>
+</div>
+
+<script src="../js/navigation.js"></script>
+<script src="../js/security.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribution Shift Monitor | PROMETHEUS-X</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+<div class="app-container">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <h2>PROMETHEUS-X</h2>
+            <span>Industrial Intelligence</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <p class="menu-label">MAIN MENU</p>
+            <a href="../index.html" class="nav-link">Dashboard</a>
+            <a href="live-inspection.html" class="nav-link">Live Inspection</a>
+            <a href="inspection-records.html" class="nav-link">Inspection Records</a>
+            <a href="quality-analytics.html" class="nav-link">Quality Analytics</a>
+            <a href="anomaly-alerts.html" class="nav-link">Anomaly Alerts</a>
+
+            <p class="menu-label">MANAGEMENT</p>
+            <a href="audit-trail.html" class="nav-link">Audit Trail</a>
+            <a href="employee-management.html" class="nav-link">Employee Management</a>
+            <a href="security-access.html" class="nav-link">Security & Access</a>
+
+            <p class="menu-label">SYSTEM</p>
+            <a href="model-performance.html" class="nav-link">Model Performance</a>
+            <a href="distribution-shift.html" class="nav-link">Distribution Shift Monitor</a>
+            <a href="system-settings.html" class="nav-link">System Settings</a>
+            <a href="my-profile.html" class="nav-link">My Profile</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="../login.html" class="nav-link">Logout</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Distribution Shift Monitor</h2>
+                <p>Monitor changes in incoming inspection data</p>
+            </div>
+
+            <div class="topbar-right">
+                <span class="system-status">System Active</span>
+                <div class="profile-circle">VM</div>
+            </div>
+        </header>
+
+        <section class="dashboard-content">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Distribution Monitoring Overview</h2>
+                    <p>Identify changes between reference and incoming inspection data.</p>
+                </div>
+            </div>
+
+            <div class="shift-summary-grid">
+
+                <div class="shift-summary-card">
+                    <h3>Overall Drift Status</h3>
+                    <div class="shift-status-value">Monitoring</div>
+                    <p>Awaiting backend assessment</p>
+                </div>
+
+                <div class="shift-summary-card">
+                    <h3>Image Quality</h3>
+                    <div class="summary-number">--</div>
+                    <p>Image quality assessment</p>
+                </div>
+
+                <div class="shift-summary-card">
+                    <h3>Feature Distribution</h3>
+                    <div class="summary-number">--</div>
+                    <p>Feature-space comparison</p>
+                </div>
+
+                <div class="shift-summary-card">
+                    <h3>Last Evaluation</h3>
+                    <div class="summary-number">--</div>
+                    <p>Waiting for evaluation data</p>
+                </div>
+
+            </div>
+
+            <div class="shift-details-grid">
+
+                <div class="panel shift-monitor-panel">
+                    <h3>Monitoring Categories</h3>
+
+                    <div class="shift-category">
+                        <div>
+                            <strong>Brightness Changes</strong>
+                            <p>Changes in image brightness and exposure</p>
+                        </div>
+                        <span class="shift-pending">Awaiting Data</span>
+                    </div>
+
+                    <div class="shift-category">
+                        <div>
+                            <strong>Contrast Changes</strong>
+                            <p>Changes in image contrast and visibility</p>
+                        </div>
+                        <span class="shift-pending">Awaiting Data</span>
+                    </div>
+
+                    <div class="shift-category">
+                        <div>
+                            <strong>Camera / Image Quality</strong>
+                            <p>Blur, resolution and camera variation</p>
+                        </div>
+                        <span class="shift-pending">Awaiting Data</span>
+                    </div>
+
+                    <div class="shift-category">
+                        <div>
+                            <strong>Feature Distribution</strong>
+                            <p>Changes in extracted visual features</p>
+                        </div>
+                        <span class="shift-pending">Awaiting Data</span>
+                    </div>
+                </div>
+
+                <div class="panel shift-information-panel">
+                    <h3>What is Distribution Shift?</h3>
+
+                    <p>
+                        Distribution shift occurs when incoming inspection
+                        images differ from the reference data used during
+                        model development or calibration.
+                    </p>
+
+                    <p>
+                        It may happen because of lighting changes, camera
+                        differences, production variations or image quality.
+                    </p>
+
+                    <div class="shift-warning">
+                        <strong>Important Notice</strong>
+                        <p>
+                            Distribution shift is a monitoring signal,
+                            not proof of a product defect. The system should
+                            request review when necessary rather than
+                            automatically classify a product as defective.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="panel shift-recommendation-panel">
+                <h3>Recommended Actions</h3>
+
+                <ul>
+                    <li>Check camera position and image capture conditions.</li>
+                    <li>Verify lighting consistency.</li>
+                    <li>Review image quality and focus.</li>
+                    <li>Compare incoming features with reference data.</li>
+                    <li>Request human review before changing model settings.</li>
+                </ul>
+            </div>
+
+            <p class="shift-demo-note">
+                Live distribution monitoring will be available after backend
+                integration. No drift status is currently being calculated.
+            </p>
+
+        </section>
+
+        <footer class="dashboard-footer">
+            PROMETHEUS-X © 2026 | Industrial Anomaly Detection Platform
+        </footer>
+
+    </main>
+</div>
+
+<script src="../js/navigation.js"></script>
+<script src="../js/drift.js"></script>
+
+</body>
+</html>

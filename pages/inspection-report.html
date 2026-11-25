@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inspection Report | PROMETHEUS-X</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">P</div>
+            <div>
+                <h2>PROMETHEUS-X</h2>
+                <p>INDUSTRIAL INTELLIGENCE</p>
+            </div>
+        </div>
+
+        <div class="menu-group">
+            <p class="menu-heading">MAIN MENU</p>
+
+            <a href="../index.html" class="nav-link">Dashboard</a>
+            <a href="live-inspection.html" class="nav-link">Live Inspection</a>
+            <a href="inspection-records.html" class="nav-link active">Inspection Records</a>
+            <a href="quality-analytics.html" class="nav-link">Quality Analytics</a>
+            <a href="anomaly-alerts.html" class="nav-link">Anomaly Alerts</a>
+        </div>
+
+        <div class="menu-group">
+            <p class="menu-heading">MANAGEMENT</p>
+
+            <a href="audit-trail.html" class="nav-link">Audit Trail</a>
+            <a href="employee-management.html" class="nav-link">Employee Management</a>
+            <a href="security-access.html" class="nav-link">Security & Access</a>
+        </div>
+
+        <div class="menu-group">
+            <p class="menu-heading">SYSTEM</p>
+
+            <a href="model-performance.html" class="nav-link">Model Performance</a>
+            <a href="distribution-shift.html" class="nav-link">Distribution Shift Monitor</a>
+            <a href="system-settings.html" class="nav-link">System Settings</a>
+            <a href="my-profile.html" class="nav-link">My Profile</a>
+        </div>
+
+        <div class="sidebar-bottom">
+            <p>Industrial Quality Platform</p>
+            <a href="../login.html" class="nav-link">Logout</a>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <h1>Inspection Report</h1>
+                <p>Detailed industrial product inspection analysis</p>
+            </div>
+
+            <div class="topbar-right">
+                <span class="system-status">
+                    <span class="status-dot"></span>
+                    Report Details
+                </span>
+
+                <div class="profile-circle">A</div>
+            </div>
+
+        </header>
+
+
+        <section class="page-content">
+
+            <!-- BACK BUTTON -->
+            <div class="report-actions">
+
+                <a href="inspection-records.html" class="back-button">
+                    ← Back to Records
+                </a>
+
+                <button type="button" class="primary-button report-print-button"
+                    onclick="window.print()">
+                    Print / Save PDF
+                </button>
+
+            </div>
+
+
+            <!-- REPORT HEADER -->
+            <section class="panel report-header">
+
+                <div>
+                    <h2>Product Inspection Report</h2>
+                    <p>Inspection ID: <strong id="reportInspectionId">INS-1025</strong></p>
+                </div>
+
+                <span class="status-badge normal" id="reportStatus">
+                    Normal
+                </span>
+
+            </section>
+
+
+            <!-- PRODUCT INFORMATION -->
+            <section class="panel report-section">
+
+                <h3>Product Information</h3>
+
+                <div class="report-info-grid">
+
+                    <div>
+                        <span>Product ID</span>
+                        <strong id="reportProductId">PRD-1025</strong>
+                    </div>
+
+                    <div>
+                        <span>Product Category</span>
+                        <strong id="reportCategory">Bolt</strong>
+                    </div>
+
+                    <div>
+                        <span>Batch ID</span>
+                        <strong id="reportBatchId">BATCH-001</strong>
+                    </div>
+
+                    <div>
+                        <span>Inspection Date</span>
+                        <strong id="reportDate">24 Nov 2026</strong>
+                    </div>
+
+                    <div>
+                        <span>Inspection Time</span>
+                        <strong id="reportTime">10:30 AM</strong>
+                    </div>
+
+                    <div>
+                        <span>Inspector</span>
+                        <strong id="reportInspector">Admin</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- INSPECTION ANALYSIS -->
+            <section class="panel report-section">
+
+                <h3>Inspection Analysis</h3>
+
+                <div class="report-info-grid">
+
+                    <div>
+                        <span>Anomaly Status</span>
+                        <strong id="reportAnomaly">Normal</strong>
+                    </div>
+
+                    <div>
+                        <span>Severity</span>
+                        <strong id="reportSeverity">None</strong>
+                    </div>
+
+                    <div>
+                        <span>Confidence</span>
+                        <strong id="reportConfidence">--</strong>
+                    </div>
+
+                    <div>
+                        <span>Anomaly Score</span>
+                        <strong id="reportScore">--</strong>
+                    </div>
+
+                    <div>
+                        <span>Affected Area</span>
+                        <strong id="reportArea">--</strong>
+                    </div>
+
+                    <div>
+                        <span>Drift Status</span>
+                        <strong id="reportDrift">Not Available</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- IMAGE ANALYSIS -->
+            <section class="panel report-section">
+
+                <h3>Visual Inspection Evidence</h3>
+
+                <div class="report-image-grid">
+
+                    <div>
+                        <h4>Original Product Image</h4>
+
+                        <div class="report-image-placeholder">
+                            <span>Original inspection image will appear here</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4>Anomaly Heatmap</h4>
+
+                        <div class="report-image-placeholder">
+                            <span>AI-generated heatmap will appear here</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- REVIEW INFORMATION -->
+            <section class="panel report-section">
+
+                <h3>Inspector Review</h3>
+
+                <div class="report-info-grid">
+
+                    <div>
+                        <span>Review Status</span>
+                        <strong>Not Reviewed</strong>
+                    </div>
+
+                    <div>
+                        <span>Reviewed By</span>
+                        <strong>--</strong>
+                    </div>
+
+                    <div>
+                        <span>Review Date</span>
+                        <strong>--</strong>
+                    </div>
+
+                    <div>
+                        <span>Remarks</span>
+                        <strong>No remarks available</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <p class="records-note">
+                Demonstration report. Actual inspection data, original images,
+                heatmaps and review information will be loaded from the backend.
+            </p>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../js/navigation.js"></script>
+
+</body>
+</html>

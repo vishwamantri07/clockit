@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management | PROMETHEUS-X</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+<div class="app-container">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <h2>PROMETHEUS-X</h2>
+            <span>Industrial Intelligence</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <p class="menu-label">MAIN MENU</p>
+            <a href="../index.html" class="nav-link">Dashboard</a>
+            <a href="live-inspection.html" class="nav-link">Live Inspection</a>
+            <a href="inspection-records.html" class="nav-link">Inspection Records</a>
+            <a href="quality-analytics.html" class="nav-link">Quality Analytics</a>
+            <a href="anomaly-alerts.html" class="nav-link">Anomaly Alerts</a>
+
+            <p class="menu-label">MANAGEMENT</p>
+            <a href="audit-trail.html" class="nav-link">Audit Trail</a>
+            <a href="employee-management.html" class="nav-link">Employee Management</a>
+            <a href="security-access.html" class="nav-link">Security & Access</a>
+
+            <p class="menu-label">SYSTEM</p>
+            <a href="model-performance.html" class="nav-link">Model Performance</a>
+            <a href="distribution-shift.html" class="nav-link">Distribution Shift Monitor</a>
+            <a href="system-settings.html" class="nav-link">System Settings</a>
+            <a href="my-profile.html" class="nav-link">My Profile</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="../login.html" class="nav-link">Logout</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Employee Management</h2>
+                <p>Manage employees and their platform roles</p>
+            </div>
+
+            <div class="topbar-right">
+                <span class="system-status">System Active</span>
+                <div class="profile-circle">VM</div>
+            </div>
+        </header>
+
+        <section class="dashboard-content">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Employee Overview</h2>
+                    <p>View employee details, departments and access roles.</p>
+                </div>
+            </div>
+
+            <div class="employee-summary-grid">
+
+                <div class="employee-summary-card">
+                    <h3>Total Employees</h3>
+                    <div class="summary-number" id="totalEmployees">6</div>
+                </div>
+
+                <div class="employee-summary-card">
+                    <h3>Active Employees</h3>
+                    <div class="summary-number" id="activeEmployees">5</div>
+                </div>
+
+                <div class="employee-summary-card">
+                    <h3>Inactive Employees</h3>
+                    <div class="summary-number" id="inactiveEmployees">1</div>
+                </div>
+
+                <div class="employee-summary-card">
+                    <h3>Departments</h3>
+                    <div class="summary-number">4</div>
+                </div>
+
+            </div>
+
+            <div class="panel employee-panel">
+
+                <div class="employee-toolbar">
+                    <input
+                        type="text"
+                        id="employeeSearch"
+                        placeholder="Search employee name or ID..."
+                    >
+
+                    <select id="employeeRoleFilter">
+                        <option value="all">All Roles</option>
+                        <option value="administrator">Administrator</option>
+                        <option value="production manager">Production Manager</option>
+                        <option value="quality inspector">Quality Inspector</option>
+                        <option value="supervisor">Supervisor</option>
+                    </select>
+
+                    <select id="employeeStatusFilter">
+                        <option value="all">All Status</option>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                    </select>
+                </div>
+
+                <div class="table-container">
+                    <table class="data-table employee-table">
+
+                        <thead>
+                            <tr>
+                                <th>Employee ID</th>
+                                <th>Employee Name</th>
+                                <th>Department</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th>Activity</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="employeeTableBody">
+
+                            <tr data-role="administrator" data-status="active">
+                                <td>EMP-001</td>
+                                <td>Vishwa Mantri</td>
+                                <td>Administration</td>
+                                <td>Administrator</td>
+                                <td><span class="status-badge status-normal">Active</span></td>
+                                <td><a href="audit-trail.html?employee=EMP-001" class="employee-activity-link">View Activity</a></td>
+                            </tr>
+
+                            <tr data-role="production manager" data-status="active">
+                                <td>EMP-002</td>
+                                <td>Asha Rao</td>
+                                <td>Production</td>
+                                <td>Production Manager</td>
+                                <td><span class="status-badge status-normal">Active</span></td>
+                                <td><a href="audit-trail.html?employee=EMP-002" class="employee-activity-link">View Activity</a></td>
+                            </tr>
+
+                            <tr data-role="quality inspector" data-status="active">
+                                <td>EMP-003</td>
+                                <td>Rahul Sharma</td>
+                                <td>Quality Control</td>
+                                <td>Quality Inspector</td>
+                                <td><span class="status-badge status-normal">Active</span></td>
+                                <td><a href="audit-trail.html?employee=EMP-003" class="employee-activity-link">View Activity</a></td>
+                            </tr>
+
+                            <tr data-role="supervisor" data-status="active">
+                                <td>EMP-004</td>
+                                <td>Priya Nair</td>
+                                <td>Production</td>
+                                <td>Supervisor</td>
+                                <td><span class="status-badge status-normal">Active</span></td>
+                                <td><a href="audit-trail.html?employee=EMP-004" class="employee-activity-link">View Activity</a></td>
+                            </tr>
+
+                            <tr data-role="quality inspector" data-status="active">
+                                <td>EMP-005</td>
+                                <td>Meera Das</td>
+                                <td>Quality Control</td>
+                                <td>Quality Inspector</td>
+                                <td><span class="status-badge status-normal">Active</span></td>
+                                <td><a href="audit-trail.html?employee=EMP-005" class="employee-activity-link">View Activity</a></td>
+                            </tr>
+
+                            <tr data-role="supervisor" data-status="inactive">
+                                <td>EMP-006</td>
+                                <td>Kiran Shetty</td>
+                                <td>Maintenance</td>
+                                <td>Supervisor</td>
+                                <td><span class="status-badge status-anomaly">Inactive</span></td>
+                                <td><a href="audit-trail.html?employee=EMP-006" class="employee-activity-link">View Activity</a></td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+
+                <p class="employee-note">
+                    Demonstration employee records. Employee data and role
+                    permissions will be managed securely through the backend.
+                </p>
+
+            </div>
+
+        </section>
+
+        <footer class="dashboard-footer">
+            PROMETHEUS-X © 2026 | Industrial Anomaly Detection Platform
+        </footer>
+
+    </main>
+</div>
+
+<script src="../js/navigation.js"></script>
+<script src="../js/employees.js"></script>
+
+</body>
+</html>

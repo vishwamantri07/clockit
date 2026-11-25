@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anomaly Alerts | PROMETHEUS-X</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">P</div>
+            <div>
+                <h2>PROMETHEUS-X</h2>
+                <p>INDUSTRIAL INTELLIGENCE</p>
+            </div>
+        </div>
+
+        <div class="menu-group">
+            <p class="menu-heading">MAIN MENU</p>
+
+            <a href="../index.html" class="nav-link">Dashboard</a>
+            <a href="live-inspection.html" class="nav-link">Live Inspection</a>
+            <a href="inspection-records.html" class="nav-link">Inspection Records</a>
+            <a href="quality-analytics.html" class="nav-link">Quality Analytics</a>
+            <a href="anomaly-alerts.html" class="nav-link active">Anomaly Alerts</a>
+        </div>
+
+        <div class="menu-group">
+            <p class="menu-heading">MANAGEMENT</p>
+
+            <a href="audit-trail.html" class="nav-link">Audit Trail</a>
+            <a href="employee-management.html" class="nav-link">Employee Management</a>
+            <a href="security-access.html" class="nav-link">Security & Access</a>
+        </div>
+
+        <div class="menu-group">
+            <p class="menu-heading">SYSTEM</p>
+
+            <a href="model-performance.html" class="nav-link">Model Performance</a>
+            <a href="distribution-shift.html" class="nav-link">Distribution Shift Monitor</a>
+            <a href="system-settings.html" class="nav-link">System Settings</a>
+            <a href="my-profile.html" class="nav-link">My Profile</a>
+        </div>
+
+        <div class="sidebar-bottom">
+            <p>Industrial Quality Platform</p>
+            <a href="../login.html" class="nav-link">Logout</a>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <h1>Anomaly Alerts</h1>
+                <p>Monitor detected defects and inspection warnings</p>
+            </div>
+
+            <div class="topbar-right">
+                <span class="system-status">
+                    <span class="status-dot"></span>
+                    Alert Monitoring
+                </span>
+
+                <div class="profile-circle">A</div>
+            </div>
+
+        </header>
+
+
+        <section class="page-content">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Alert Overview</h2>
+                    <p>Review anomalies requiring attention</p>
+                </div>
+            </div>
+
+
+            <!-- ALERT SUMMARY -->
+            <div class="record-summary">
+
+                <div class="record-stat">
+                    <span>Total Alerts</span>
+                    <h3>42</h3>
+                </div>
+
+                <div class="record-stat">
+                    <span>High Severity</span>
+                    <h3>12</h3>
+                </div>
+
+                <div class="record-stat">
+                    <span>Medium Severity</span>
+                    <h3>20</h3>
+                </div>
+
+                <div class="record-stat">
+                    <span>Pending Review</span>
+                    <h3>10</h3>
+                </div>
+
+            </div>
+
+
+            <!-- ALERT FILTERS -->
+            <section class="panel alerts-panel">
+
+                <div class="records-toolbar">
+
+                    <div>
+                        <h3>Recent Anomaly Alerts</h3>
+                        <p>Sample demonstration alerts</p>
+                    </div>
+
+                    <div class="record-filters">
+
+                        <input
+                            type="search"
+                            id="alertSearch"
+                            placeholder="Search product or alert ID"
+                        >
+
+                        <select id="severityFilter">
+                            <option value="all">All Severity</option>
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+
+                        <select id="alertStatusFilter">
+                            <option value="all">All Review Status</option>
+                            <option value="pending">Pending Review</option>
+                            <option value="reviewed">Reviewed</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ALERT LIST -->
+                <div class="alert-list" id="alertList">
+
+                    <article class="alert-card" data-severity="high" data-status="pending">
+
+                        <div class="alert-indicator high-indicator"></div>
+
+                        <div class="alert-content">
+
+                            <div class="alert-title-row">
+                                <h3>Surface Crack Detected</h3>
+                                <span class="severity-badge high">High Severity</span>
+                            </div>
+
+                            <p>
+                                A possible surface crack was detected during
+                                inspection of product PRD-1024.
+                            </p>
+
+                            <div class="alert-meta">
+                                <span>Alert: ALT-001</span>
+                                <span>Inspection: INS-1024</span>
+                                <span>24 Nov 2026, 09:45 AM</span>
+                            </div>
+
+                            <div class="alert-footer">
+                                <span class="review-label pending-label">Pending Review</span>
+                                <a href="inspection-report.html?id=INS-1024">View Report</a>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="alert-card" data-severity="medium" data-status="reviewed">
+
+                        <div class="alert-indicator medium-indicator"></div>
+
+                        <div class="alert-content">
+
+                            <div class="alert-title-row">
+                                <h3>Thread Irregularity Detected</h3>
+                                <span class="severity-badge medium">Medium Severity</span>
+                            </div>
+
+                            <p>
+                                An irregularity was identified in the threaded
+                                region of product PRD-1021.
+                            </p>
+
+                            <div class="alert-meta">
+                                <span>Alert: ALT-002</span>
+                                <span>Inspection: INS-1021</span>
+                                <span>22 Nov 2026, 11:10 AM</span>
+                            </div>
+
+                            <div class="alert-footer">
+                                <span class="review-label reviewed-label">Reviewed</span>
+                                <a href="inspection-report.html?id=INS-1021">View Report</a>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="alert-card" data-severity="low" data-status="pending">
+
+                        <div class="alert-indicator low-indicator"></div>
+
+                        <div class="alert-content">
+
+                            <div class="alert-title-row">
+                                <h3>Minor Surface Variation</h3>
+                                <span class="severity-badge low">Low Severity</span>
+                            </div>
+
+                            <p>
+                                A minor surface variation requires
+                                verification for product PRD-1018.
+                            </p>
+
+                            <div class="alert-meta">
+                                <span>Alert: ALT-003</span>
+                                <span>Inspection: INS-1018</span>
+                                <span>21 Nov 2026, 03:30 PM</span>
+                            </div>
+
+                            <div class="alert-footer">
+                                <span class="review-label pending-label">Pending Review</span>
+                                <a href="inspection-report.html?id=INS-1018">View Report</a>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <p class="records-note">
+                    Sample alerts only. Actual anomaly alerts will be generated
+                    from backend inspection results.
+                </p>
+
+            </section>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../js/navigation.js"></script>
+<script src="../js/alerts.js"></script>
+
+</body>
+</html>
